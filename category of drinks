@@ -1,0 +1,33 @@
+<h2><b>Category of Drinks</h2></b>
+<ul>
+    <li><h3>Cold Beverages:</h3></li>
+		<ul>
+			<li><h4>Iced Coffee</li></h4>
+			<li><h4>Iced Cappuccino</li></h4>
+			<li><h4>Fruit Smoothie</li></h4>
+			<li><h4>Milkshakes:</li></h4>
+			<ul>
+				<li><h5>Chocolate</li></h5>
+				<li><h5>Vanilla</li></h5>
+				<li><h5>Strawberry</li></h5>
+				<li><h5>Caramel</li></h5>
+			</ul>
+		</ul>
+		
+    <li><h3>Hot Beverages:<h3></li>
+<ul>
+			<li><h4>Tea</li></h4>
+			<ul>
+				<li><h5>Green Tea</li></h5>
+				<li><h5>Peppermint</li></h5>
+				<li><h5>Apple Cinnamon</li></h5>
+				<li><h5>Honey Lemon</li></h5>
+			</ul>
+			<li><h4>Coffee</li></h4>
+			<li><h4>Latte</li></h4>
+			<li><h4>French Vanilla</li></h4>
+			<li><h4>Hot Chocolate</li></h4>
+			<li><h4>Cappuccino</li></h4>
+		
+</ul>			
+</ul>
