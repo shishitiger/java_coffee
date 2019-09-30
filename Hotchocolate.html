@@ -25,12 +25,10 @@
 								Hot chocolate, also known as drinking chocolate, cocoa, and as chocolate tea in Nigeria, is a heated drink consisting of shaved chocolate, melted chocolate or cocoa powder, heated milk or water, and usually a sweetener. Hot chocolate may be topped with whipped cream or marshmallows.
 							</td>
 						</tr>
+						<form action="cart.html" method="post" name="payForm">
 						<tr>
-							<td width="10%"></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><b>Size:</b></td>
+							<input type="hidden" name="id" value="7">
+							<td width="10%"><b>Size:</b></td>
 							<td><input type="radio" name="size" value="large"/>Large &nbsp; <input type="radio" name="size" value="medium"/> Medium &nbsp;<input type="radio" name="size" value="small" checked="true" /> Small</td>
 						</tr>
 						<tr>
@@ -43,9 +41,10 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<a href="cart.html"><strong>Buy Now</strong></a>&nbsp;|&nbsp;<a href="#">Add To Cart</a>
+								<input type="submit" value="Buy Now">&nbsp;|&nbsp;<input type="button" value="Add To Cart">
 							</td>
 						</tr>
+						</form>
 					</table>
 				</td>
 			</tr>

@@ -25,7 +25,9 @@
 								Dark roasted coffees are dark brown in color, like chocolate, or sometimes almost black. They have a sheen of oil on the surface, which is usually evident in the cup when the dark roast coffee is brewed. The coffee's origin flavors are eclipsed by the flavors of the roasting process.
 							</td>
 						</tr>
+						<form action="cart.html" method="post" name="payForm">
 						<tr>
+							<input type="hidden" name="id" value="3">
 							<td width="10%"><b>Size:</b></td>
 							<td><input type="radio" name="size" value="large"/>Large &nbsp; <input type="radio" name="size" value="medium"/> Medium &nbsp;<input type="radio" name="size" value="small" checked="true" /> Small</td>
 						</tr>
@@ -39,9 +41,10 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<a href="cart.html"><strong>Buy Now</strong></a>&nbsp;|&nbsp;<a href="#">Add To Cart</a>
+								<input type="submit" value="Buy Now">&nbsp;|&nbsp;<input type="button" value="Add To Cart">
 							</td>
 						</tr>
+						</form>
 					</table>
 				</td>
 			</tr>

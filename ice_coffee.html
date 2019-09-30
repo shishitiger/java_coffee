@@ -26,7 +26,9 @@
 								Our iced coffee starts with an artful blend of coffees from some of our favorite farms in Colombia and East Africa. These coffees are carefully selected and roasted to be steeped long and cold for a super-smooth flavor. This is cold brew done the way we strive to do everything—patiently, diligently, letting time take its course.
 							</td>
 						</tr>
+						<form action="cart.html" method="post" name="payForm">
 						<tr>
+							<input type="hidden" name="id" value="8">
 							<td width="10%"><b>Size:</b></td>
 							<td>
 								<input type="radio" name="size" value="large"/>Large &nbsp; <input type="radio" name="size" value="medium"/> Medium &nbsp;<input type="radio" name="size" value="small" checked="true" /> Small
@@ -42,9 +44,10 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<a href="cart.html"><strong>Buy Now</strong></a>&nbsp;|&nbsp;<a href="#">Add To Cart</a>
+								<input type="submit" value="Buy Now">&nbsp;|&nbsp;<input type="button" value="Add To Cart">
 							</td>
 						</tr>
+						</form>
 					</table>
 				</td>
 			</tr>

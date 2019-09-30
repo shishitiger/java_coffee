@@ -26,7 +26,9 @@
 								This frozen fruit smoothie is an icy blend of ice pieces and fresh fruit. An easy nutrient packed drink that’s perfect for a hot day.
 							</td>
 						</tr>
+						<form action="cart.html" method="post" name="payForm">
 						<tr>
+							<input type="hidden" name="id" value="6">
 							<td width="10%"><b>Flavor:</b></td>
 							<td><input type="radio" name="flavor" value="1"/>Orange Mango &nbsp; <input type="radio" name="flavor" value="2"/>Strawberry &nbsp; <input type="radio" name="flavor" value="3"/>Chocolate </td>
 						</tr>
@@ -44,9 +46,10 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<a href="cart.html"><strong>Buy Now</strong></a>&nbsp;|&nbsp;<a href="#">Add To Cart</a>
+								<input type="submit" value="Buy Now">&nbsp;|&nbsp;<input type="button" value="Add To Cart">
 							</td>
 						</tr>
+						</form>
 					</table>
 				</td>
 			</tr>

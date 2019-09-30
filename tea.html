@@ -25,7 +25,9 @@
 								Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves. There are many different types of tea, such as peppermint, apple cinnamon, honey lemon, and green tea.
 							</td>
 						</tr>
+						<form action="cart.html" method="post" name="payForm">
 						<tr>
+							<input type="hidden" name="id" value="13">
 							<td width="10%"><b>Flavor:</b></td>
 							<td>
 								<input type="radio" name="flavor" value="1"/>Green Tea &nbsp; <input type="radio" name="flavor" value="2"/>Apple Cinnamon &nbsp; <input type="radio" name="flavor" value="3"/>Peppermint Tea &nbsp; <input type="radio" name="flavor" value="2"/>Honey Lemon &nbsp;
@@ -47,9 +49,10 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<a href="cart.html"><strong>Buy Now</strong></a>&nbsp;|&nbsp;<a href="#">Add To Cart</a>
+								<input type="submit" value="Buy Now">&nbsp;|&nbsp;<input type="button" value="Add To Cart">
 							</td>
 						</tr>
+						</form>
 					</table>
 				</td>
 			</tr>

@@ -23,7 +23,9 @@
 						<tr>
 							<td colspan="2">A typical latte is made with six to eight ounces of steamed milk and one shot of espresso.he beverage may also be topped with foam for both flavor and presentation.</td>
 						</tr>
+						<form action="cart.html" method="post" name="payForm">
 						<tr>
+							<input type="hidden" name="id" value="10">
 							<td><b>Size:</b></td>
 							<td><input type="radio" name="size" value="large"/>Large &nbsp; <input type="radio" name="size" value="medium"/> Medium &nbsp;<input type="radio" name="size" value="small" checked="true" /> Small</td>
 						</tr>
@@ -37,9 +39,10 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<a href="cart.html"><strong>Buy Now</strong></a>&nbsp;|&nbsp;<a href="#">Add To Cart</a>
+								<input type="submit" value="Buy Now">&nbsp;|&nbsp;<input type="button" value="Add To Cart">
 							</td>
 						</tr>
+						</form>
 					</table>
 				</td>
 			</tr>
