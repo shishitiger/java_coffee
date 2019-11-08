@@ -1,28 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Java Coffee, The best coffee shop around the world</title>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style type="text/css">
+		#ad_section{
+			background-color: #dca763;
+			margin-bottom: 5px;
+			border-radius: 1em;
+		}
+		.ad_image{
+			width: 540px;
+			height: 400px;
+			margin: 20px 30px;
+			border-radius: 1em;
+		}
+		.ad_description{
+			float: right;
+			width: 350px;
+			margin-top: 150px;
+			line-height: 1.5em;
+		}
+		.ad_description h2{
+			font-size: 1.5em;
+			word-spacing: 1px;
+			color: #FFF;
+			text-transform: uppercase;
+		}
+		.ad_description p{
+			font-style: italic;
+			font-size: 0.9em;
+			font-weight: bold;
+		}
+		.ad_description  a:link{
+			color : black;
+			border-bottom: 1px dotted black;
+		}
+		#app_download {
+			background-image: url("new_image/app_ad-bg.gif");
+			height:200px;
+			border-radius: 1em;
+		}
+		.app_download_img{
+			width: 170px;
+			float: left;
+			margin-left: 40px;
+			margin-top: 20px;	
+		}
+		.app_download_description{
+			float: left;
+			width: 720px;
+			margin-top: 40px;
+			text-align: center;
+		}
+		.app_download_app_store{
+			float: right;
+			width: 270px;
+			margin-right: 50px;
+		}
+	</style>
 </head>
 <body>
-	<header>
-		<h1><a href="index.html">Java Coffee <img src="images/logo.png" alt="Java Coffee" width="40px;" height="50px;"></a></h1>
+	<header class="global_header">
+		<img src="https://www.starbucks.ca/static/images/global/logo.svg">
+		<nav class="global_header_navigation">
+			<ul>
+				<li><a href="coffee_intro.html">Coffee Introduction</a></li>
+				<li><a href="drink_category.html">Menu</a></li>
+				<li><a href="social_impact.html">Social Impact</a> </li>
+				<li><a href="app.html">APP</a></li>
+			</ul>
+		</nav>
 	</header>
-	<nav >
-		<h2><a href="coffee_intro.html">Coffee Introduction</a> | <a href="drink_category.html">Menu</a> | <a href="social_impact.html">Social Impact</a> | <a href="app.html">APP</a></h2>
-	</nav>
-	<section>
-		<a href="drink_category.html"><img src="images/promotion_1.webp" width="400px;" height="300px;"></a><br>
-		We has all your favorite cold beverage drinks, served up chilled and hand-crafted to perfection. <a href="drink_category.html">Find >></a>
-		<hr>
-	</section>
-	<section>
-		<a href="drink_category.html"><img src="images/promotion.webp" width="400px;" height="300px;"></a><br>
-		Rich, caramelly espresso and steamed milk, infused with cardamom and sugar, sprinkled with fall spice. <a href="drink_category.html">Find >></a>
-	</section>
-	<footer>
-		<hr>
-		<a href="aboutus.html">About Us</a> |<a href="contact_us.html"> Contact Us</a> <br>
-		&copy;2019 JavaCoffee Corporation. All rights reserved.
-	</footer>
+	<main>
+		<section id="ad_section">
+			<div style="text-align:center; background-color: #FFFFFF; border-radius: 1em;">
+				<img src="new_image/advertisement/adv_all.jpg" width="99%" height="320px;" style="border-radius: 1em; margin-top: 5px;">
+			</div>
+			<hr>
+			<div>
+				<img class="ad_image" src="new_image/advertisement/ad_2.jpg">
+				<div class="ad_description">
+					<h2>SEASON’S TREATINGS</h2>
+					<p>Make your coffee even merrier with our classic Cranberry Bliss® Bar.</p>
+					<a href="http://google.com">Detail >></a>
+				</div>
+			</div>
+			<hr>
+			<div>
+				<img class="ad_image" src="new_image/advertisement/ad_1.jpg">
+				<div class="ad_description">
+					<h2>SEASON’S TREATINGS</h2>
+					<p>Make your coffee even merrier with our classic Cranberry Bliss® Bar.</p>
+					<a href="http://google.com">Detail >></a>
+				</div>
+			</div>
+		</section>
+		<section id="app_download">
+			<div class="app_download_img">
+				<img src="new_image/apps.webp" width="160px">
+			</div>
+			<div class="app_download_description">
+				<p>Pay with your phone. And do so much more.</p>
+			</div>
+			<div class="app_download_app_store">
+				<img src="new_image/footer-app-android-store.png">
+			</div>
+			<div class="app_download_app_store">
+				<img src="new_image/footer-app-android-store.png">
+			</div>
+		</section>
+	</main>
 </body>
 </html>
