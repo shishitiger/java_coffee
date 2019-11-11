@@ -1,33 +1,66 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Java Coffee, The best coffee shop around the world</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style type="text/css">
+		.about_us {
+			padding: 20px;
+			text-align: center;
+		}
+		.about_us header{
+			text-align: center;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border-bottom: 1px dotted black;
+		}
+		.about_us img{
+			box-shadow: 5px 5px 10px 3px #888888;
+			width:600px;
+			height:400px;
+			margin: 20px;
+			border-radius: 1em;
+		}
+		.about_us p{
+			text-align: left;
+			font-style: italic;
+			font-size: 1em;
+			line-height: 3em;
+			text-indent: 3em;
+			margin: 20px;
+		}
+		.about_us p:first-letter{
+			font-weight: bold;
+			font-size: 1.5em;
+		}
+	</style>
 </head>
 <body>
-	<header>
-		<h1><a href="index.html">Java Coffee <img src="images/logo.png" alt="Java Coffee" width="40px;" height="50px;"></a></h1>
+	<header class="global_header">
+		<a href="index.html"><img src="new_image/logo.png"></a>
+		<nav class="global_header_navigation">
+			<ul>
+				<li><a href="coffee_intro.html">Coffee Introduction</a></li>
+				<li><a href="drink_category.html">Menu</a></li>
+				<li><a href="social_impact.html">Social Impact</a> </li>
+				<li><a href="app.html">APP</a></li>
+			</ul>
+		</nav>
 	</header>
-	<nav >
-		<h2><a href="coffee_intro.html">Coffee Introduction</a> | <a href="drink_category.html">Menu</a> | <a href="social_impact.html">Social Impact</a> | <a href="app.html">APP</a></h2>
-	</nav>
-	<section>
-		<header>
-			<h3>About us</h3>
-		</header>
-		<p>
-			Java Coffee offers a warm and inviting environment for not only your your morning coffee but also for sitting down and enjoying a specialty beverage. 
-			All of our beverages are made with natural ingredients, which means no added chemicals or preservatives ensuring you the highest quality and health. 
-			We offer a variety of beverages, from coffee to smoothies, all of our beverages are made by trained baristas. Java coffee is a family owned business, passed down from generations of coffee brewers to perfect the best recipe that ensures our customers satisfaction.
-
-			<br>
-			<br>
-			<img src="images/oldcoffeshop.jpg"width="500px;" height="500px;">
-		</p>
-	</section>
-	<footer>
-		<hr>
-		<a href="aboutus.html">About Us</a> |<a href="contact_us.html"> Contact Us</a> <br>
-		&copy;2019 JavaCoffee Corporation. All rights reserved.
+	<main>
+		<section class="about_us">
+			<header><h3>About Us</h3></header>
+			<img src="images/oldcoffeshop.jpg">
+			<p>
+				Java Coffee offers a warm and inviting environment for not only your your morning coffee but also for sitting down and enjoying a specialty beverage. 
+				All of our beverages are made with natural ingredients, which means no added chemicals or preservatives ensuring you the highest quality and health. 
+				We offer a variety of beverages, from coffee to smoothies, all of our beverages are made by trained baristas. Java coffee is a family owned business, passed down from generations of coffee brewers to perfect the best recipe that ensures our customers satisfaction.
+			</p>
+		</section>
+	</main>
+	<footer class="global_footer">
+		<div><a href="aboutus.html">About Us</a> | <a href="contact_us.html">Contact Us</a></div>
+		<div>&copy;2019 JavaCoffee Corporation. All rights reserved.</div>
 	</footer>
 </body>
-</html>
 </html>

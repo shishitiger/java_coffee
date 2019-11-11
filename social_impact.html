@@ -1,25 +1,65 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Social Impact in Java Coffee</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style type="text/css">
+		.social_impact {
+			padding: 20px;
+			height:400px;
+		}
+		.social_impact header{
+			text-align: center;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border-bottom: 1px dotted black;
+		}
+		.social_impact img{
+			box-shadow: 5px 5px 10px 3px #888888;
+			width:500px;
+			height:300px;
+			margin: 20px;
+			border-radius: 1em;
+			float:left;
+		}
+		.social_impact p{
+			font-style: italic;
+			font-size: 1em;
+			line-height: 3em;
+			text-indent: 3em;
+			margin: 20px;
+		}
+		.social_impact p:first-letter{
+			font-weight: bold;
+			font-size: 1.5em;
+		}
+	</style>
 </head>
 <body>
-	<header>
-		<h1><a href="index.html">Java Coffee <img src="images/logo.png" alt="Java Coffee" width="40px;" height="50px;"></a></h1>
+	<header class="global_header">
+		<a href="index.html"><img src="new_image/logo.png"></a>
+		<nav class="global_header_navigation">
+			<ul>
+				<li><a href="coffee_intro.html">Coffee Introduction</a></li>
+				<li><a href="drink_category.html">Menu</a></li>
+				<li><a href="social_impact.html">Social Impact</a> </li>
+				<li><a href="app.html">APP</a></li>
+			</ul>
+		</nav>
 	</header>
-	<nav >
-		<h2><a href="coffee_intro.html">Coffee Introduction</a> | <a href="drink_category.html">Menu</a> | <a href="social_impact.html">Social Impact</a> | <a href="app.html">APP</a></h2>
-	</nav>
-	<section>
-		<p>
-			<h3>For many Colombian farmers, growing coffee beans is part of their national identity. By Java Coffee supplying them with jobs, we are helping them reclaim their identity. Growing coffee beans has been a long tradition in family, passing it down from generation to generation.</h3>
-			<br>
+	<main>
+		<section class="social_impact">
+			<header><h3>Social Impact</h3></header>
 			<img src="images/social.jpg" alt="Java Coffee" width="400px;" height="200px;">
-		</p>
-	</section>		
-	<footer>
-		<hr>
-		<a href="aboutus.html">About Us</a> |<a href="contact_us.html"> Contact Us</a> <br>
-		&copy;2019 JavaCoffee Corporation. All rights reserved.
+			<p>
+				For many Colombian farmers, growing coffee beans is part of their national identity. By Java Coffee supplying them with jobs, we are helping them reclaim their identity. Growing coffee beans has been a long tradition in family, passing it down from generation to generation.
+				<br>
+			</p>
+		</section>
+	</main>
+	<footer class="global_footer">
+		<div><a href="aboutus.html">About Us</a> | <a href="contact_us.html">Contact Us</a></div>
+		<div>&copy;2019 JavaCoffee Corporation. All rights reserved.</div>
 	</footer>
 </body>
 </html>
