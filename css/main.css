@@ -7,6 +7,12 @@ body {
 	font-family: "Crete Round",Georgia,"Times New Roman",serif;
 }
 
+main, footer, header{
+	background-color: #f1eded;
+	border-radius: 1em;
+	margin-bottom: 5px;
+}
+
 a{
 	color:black;
 	text-decoration: none;
@@ -14,9 +20,6 @@ a{
 
 .global_header {
 	height: 90px;
-	border-radius: 1em;
-	background-color: #f1eded;
-	margin-bottom: 5px;
 }
 
 .global_header img {
@@ -27,6 +30,16 @@ a{
 	border-radius: 1em;
 	/*border: 1px solid #3d3a35;*/
 }
+
+.global_footer {
+	height: 70px;
+	text-align: center;
+}
+
+.global_footer div{
+	padding-top: 10px;
+}
+
 
 .global_header_navigation {
 	float:left;
