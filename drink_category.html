@@ -1,18 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Java Coffee, The best coffee shop around the world</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<style type="text/css">
-		main{
-			background-color: #FFF;
-			border-radius: 1em;
+        .cardBox {
+            width: 250px;
+            box-shadow: 5px 5px 10px 3px #888888;
+            text-align: center;
+            float: left;
+            margin: 20px 30px;
+            padding: 15px 10px;
+            border-radius: 1em;
+            border: 1px solid #5cb3c9;
+            cursor: pointer;
+        }
+        .cardBox:hover{
+        	transform: scale(1.01);
+        }
+
+        .cardBox img{
+        	width: 150px;
+        	height: 150px;
+        	border-radius: 1em;
+        }
+
+        .headerBox {
+            font-size: 1.1em;
+            line-height: 2em;
+            font-weight: bold;
+        }
+
+        .bodyBox {
+        	text-align: left;
+        	overflow: hidden;
+        	height: 150px;
+        }
+        .bodyBox{
+			font-style: italic;
+			font-size: 1em;
+			line-height: 2em;
+			padding-bottom: 10px;
+			padding-right: 10px;
+			padding-left: 10px;
 		}
-	</style>
+		.coffee_category{
+			float: left;
+			width: 190px;
+			border-radius: 1em;
+			margin: 20px 10px 5px 30px;
+			box-shadow: 5px 5px 10px 3px #888888;
+		}
+		.coffee_category li{
+			margin: 10px;
+			line-height: 2em;
+		}
+		.items {
+			float: right;
+			width: 700px;
+		}
+    </style>
 </head>
 <body>
 	<header class="global_header">
-		<img src="new_image/logo.png">
+		<a href="index.html"><img src="new_image/logo.png"></a>
 		<nav class="global_header_navigation">
 			<ul>
 				<li><a href="coffee_intro.html">Coffee Introduction</a></li>
@@ -23,29 +74,130 @@
 		</nav>
 	</header>
 	<main>
-		<section id="ad_section">
-			<h2><b>Category of Drinks</b></h2>
+		<section class="coffee_category">
 			<ul>
-			    <li><h3>Cold Beverages:</h3></li>
-					<ul>
-						<li><h4><a href="ice_coffee.html">Iced Coffee</a></h4></li>
-						<li><h4><a href="iced_cappuccino.html">Iced Cappuccino</a></h4></li>
-						<li><h4><a href="fruit_smoothie.html">Fruit Smoothie</a></h4></li>
-						<li><h4><a href="milkshakes.html">Milkshakes</a></h4></li>
-					</ul>
-					
-			    <li><h3>Hot Beverages:<h3></li>
-				<ul>
-					<li><h4><h4><a href="tea.html">Tea</a></h4></li>
-					<li><h4><h4><a href="coffee.html">Coffee</a></h4></li>
-					<li><h4><h4><a href="latte.html">Latte</a></h4></li>
-					<li><h4><h4><a href="frenchvanilla.html">French Vanilla</a></h4></li>
-					<li><h4><h4><a href="hotchocolate.html">Hot Chocolate</a></h4></li>
-					<li><h4><h4><a href="Cappuccino.html">Cappuccino</a></h4></li>
-						
-				</ul>			
+				<li><a style="color:teal;" id="cold_beverages_link" href="javascript:void(0);" onclick="switch_category('hot_beverages', 'cold_beverages');">Cold Beverages</a></li>
+				<li><a href="javascript:void(0);" id="hot_beverages_link" onclick="switch_category('cold_beverages', 'hot_beverages');">Hot Beverages</a></li>
 			</ul>
 		</section>
+		<section class="items">
+			<div id="cold_beverages">
+				<div class="cardBox">
+		            <a href="ice_coffee.html"><img src="new_image/coffee/iced_coffee.jpeg"></a>
+		            <div class="headerBox">
+		                <a href="ice_coffee.html">Iced Coffee</a>
+		            </div>
+		            <div class="bodyBox">
+		                Our iced coffee starts with an artful blend of coffees from some of our favorite farms in Colombia and East Africa. These coffees are carefully selected and roasted to be steeped long and cold for a super-smooth flavor. This is cold brew done the way we strive to do everything—patiently, diligently, letting time take its course.
+		            </div>
+		        </div>
+
+		        <div class="cardBox">
+		            <a href="milkshakes.html"><img src="new_image/coffee/milkshakes.jpeg"></a>
+		            <div class="headerBox">
+		                <a href="milkshakes.html">Milkshakes</a>
+		            </div>
+		            <div class="bodyBox">
+		                A milkshake is a sweet, cold beverage that is usually made from milk, ice cream, and/or ice milk, and sometimes flavorings or sweeteners such as butterscotch, caramel sauce, chocolate syrup, or fruit syrup.
+		            </div>
+		        </div>
+
+		        <div class="cardBox">
+		            <a href="iced_cappuccino.html"><img src="new_image/coffee/iced_cappuccino.jpeg"></a>
+		            <div class="headerBox">
+		                <a href="iced_cappuccino.html">Iced Cappuccino</a>
+		            </div>
+		            <div class="bodyBox">
+		                With less milk than a latte, Iced Cappuccino offers a stronger espresso flavor, a luxurious texture and a velvety, frothy foam with a crisp, cool undercurrent.
+		            </div>
+		        </div>
+
+		        <div class="cardBox">
+		            <a href="fruit_smoothie.html"><img src="new_image/coffee/fruit_smoothie.jpeg"></a>
+		            <div class="headerBox">
+		                <a href="fruit_smoothie.html">Fruit Smoothie</a>
+		            </div>
+		            <div class="bodyBox">
+		                This frozen fruit smoothie is an icy blend of ice pieces and fresh fruit. An easy nutrient packed drink that’s perfect for a hot day.
+		            </div>
+		        </div>
+	    	</div>
+
+	    	<div id="hot_beverages" style="display:none;">
+		        <div class="cardBox">
+		            <a href="tea.html"><img src="new_image/coffee/tea.jpg"></a>
+		            <div class="headerBox">
+		                <a href="tea.html">Tea</a>
+		            </div>
+		            <div class="bodyBox">
+		                Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves. There are many different types of tea, such as peppermint, apple cinnamon, honey lemon, and green tea.
+		            </div>
+		        </div>
+
+		        <div class="cardBox">
+		            <a href="coffee.html"><img src="new_image/coffee/coffee.jpg"></a>
+		            <div class="headerBox">
+		                <a href="coffee.html">Coffee</a>
+		            </div>
+		            <div class="bodyBox">
+		                Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffee species.
+		            </div>
+		        </div>
+
+		        <div class="cardBox">
+		            <a href="latte.html"><img src="new_image/coffee/latte.jpg"></a>
+		            <div class="headerBox">
+		                <a href="latte.html">Latte</a>
+		            </div>
+		            <div class="bodyBox">
+		                A typical latte is made with six to eight ounces of steamed milk and one shot of espresso.he beverage may also be topped with foam for both flavor and presentation.
+		            </div>
+		        </div>
+
+		        <div class="cardBox">
+		            <a href="frenchvanilla.html"><img src="new_image/coffee/frenchvanilla.jpg"></a>
+		            <div class="headerBox">
+		                <a href="frenchvanilla.html">French Vanilla</a>
+		            </div>
+		            <div class="bodyBox">
+		                French Vanilla is a creamy blend of vanilla and cream is perfect for a luxury coffee drink.
+		            </div>
+		        </div>
+
+		        <div class="cardBox">
+		            <a href="hotchocolate.html"><img src="new_image/coffee/hotchocolate.jpg"></a>
+		            <div class="headerBox">
+		                <a href="hotchocolate.html">Hot Chocolate</a>
+		            </div>
+		            <div class="bodyBox">
+		                Hot chocolate, also known as drinking chocolate, cocoa, and as chocolate tea in Nigeria, is a heated drink consisting of shaved chocolate, melted chocolate or cocoa powder, heated milk or water, and usually a sweetener. Hot chocolate may be topped with whipped cream or marshmallows.
+		            </div>
+		        </div>
+
+		        <div class="cardBox">
+		            <a href="Cappuccino.html"><img src="new_image/coffee/cappuccino.jpg"></a>
+		            <div class="headerBox">
+		                <a href="Cappuccino.html">Cappuccino</a>
+		            </div>
+		            <div class="bodyBox">
+		                Cappuccino is a coffee drink that today is typically composed of double espresso and hot milk, with the surface topped with foamed milk.The top third of the drink consists of milk foam; this foam can be decorated with artistic drawings made with the same milk.
+		            </div>
+		        </div>
+	    	</div>
+		</section>
+		<section style="clear: both;"></section>
 	</main>
+	<footer class="global_footer">
+		<div><a href="aboutus.html">About Us</a> | <a href="contact_us.html">Contact Us</a></div>
+		<div>&copy;2019 JavaCoffee Corporation. All rights reserved.</div>
+	</footer>
+	<script type="text/javascript">
+		function switch_category(another_tag, content_id){
+			document.getElementById(content_id + "_link").style.color="teal";
+			document.getElementById(another_tag + "_link").style.color="";
+			document.getElementById(another_tag).style.display="none";
+			document.getElementById(content_id).style.display="block";
+		}
+	</script>
 </body>
 </html>

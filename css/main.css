@@ -12,11 +12,14 @@ main, footer {
 	border-radius: 1em;
 	margin-bottom: 5px;
 }
-
-
-a:link{
+ 
+a:link {
 	color: black;
 	text-decoration: none;
+}
+
+a:hover{
+	color:teal;
 }
 
 a:visited{
@@ -47,7 +50,6 @@ a:visited{
 	padding-top: 10px;
 }
 
-
 .global_header_navigation {
 	float:left;
 	width: 700px;
@@ -74,4 +76,5 @@ a:visited{
 
 .global_header_navigation a:hover{
 	background-color: teal;
+	color: inherit;
 }
