@@ -14,16 +14,17 @@ main, footer {
 }
  
 a:link {
-	color: black;
+	color: #3d3a35;
 	text-decoration: none;
+}
+
+a:visited{
+	color:#3d3a35;
 }
 
 a:hover{
 	color:teal;
-}
-
-a:visited{
-	color:black;
+	text-decoration: underline;
 }
 
 .global_header {
