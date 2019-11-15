@@ -74,8 +74,3 @@ a:hover{
 	font-weight: bold;
 	line-height: 1.5em;
 }
-
-.global_header_navigation a:hover{
-	background-color: teal;
-	color: inherit;
-}
