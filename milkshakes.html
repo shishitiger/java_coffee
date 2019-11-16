@@ -2,19 +2,47 @@
 <html>
 <head>
 	<title>Iced Coffee in Java Coffee</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style>
+		.milkshakes {
+			padding: 20px;
+			height:390px;
+			}
+		.milkshakes td{
+			font-style: italic;
+			font-size: 1em;
+			line-height: 2em;
+			margin: 20px;
+		}
+		.milkshakes img{
+			box-shadow: 5px 5px 10px 3px #888888;
+			width:250px;
+			height:300px;
+			margin: 20px;
+			border-radius: 1em;
+			float:left;
+		}
+	</style>
 </head>
 <body>
-	<header>
-		<h1><a href="index.html">Java Coffee <img src="images/logo.png" alt="Java Coffee" width="40px;" height="50px;"></a></h1>
+	<header class="global_header">
+		<a href="index.html"><img src="new_image/logo.png"></a>
+		<nav class="global_header_navigation">
+			<ul>
+				<li><a href="coffee_intro.html">Coffee Introduction</a></li>
+				<li><a href="drink_category.html">Menu</a></li>
+				<li><a href="social_impact.html">Social Impact</a> </li>
+				<li><a href="app.html">APP</a></li>
+			</ul>
+		</nav>
 	</header>
-	<nav >
-		<h2><a href="coffee_intro.html">Coffee Introduction</a> | <a href="drink_category.html">Menu</a> | <a href="social_impact.html">Social Impact</a> | <a href="app.html">APP</a></h2>
-	</nav>
+	<main>
+	<section class="milkshakes">
 	<section>
 		<table>
 			<tr>
 				<td>
-					<img src="images/coffee_category/milkshakes.jpeg" width="200px;" height="200px;">
+					<img src="new_image/coffee/milkshakes.jpeg" width="200px;" height="200px;">
 				</td>
 				<td>
 					<table>
@@ -61,10 +89,11 @@
 			</tr>
 		</table>
 	</section>
-	<footer>
-		<hr>
-		<a href="aboutus.html">About Us</a> |<a href="contact_us.html"> Contact Us</a> <br>
-		&copy;2019 JavaCoffee Corporation. All rights reserved.
+	</section>
+	</main>
+	<footer class="global_footer">
+		<div><a href="aboutus.html">About Us</a> | <a href="contact_us.html">Contact Us</a></div>
+		<div>&copy;2019 JavaCoffee Corporation. All rights reserved.</div>
 	</footer>
 </body>
 </html>

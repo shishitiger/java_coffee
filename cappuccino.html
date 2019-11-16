@@ -1,19 +1,48 @@
+<!DOCTYPE html> 
 <html>
 <head>
-	<title>Cappuccino in Java Coffee</title>
+	<title>Java Coffee, The best coffee shop around the world</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style>
+		.cappuccino {
+			padding: 20px;
+			height:300px;
+			}
+		.cappuccino td{
+			font-style: italic;
+			font-size: 1em;
+			line-height: 2em;
+			margin: 20px;
+		}
+		.cappuccino img{
+			box-shadow: 5px 5px 10px 3px #888888;
+			width:350px;
+			height:300px;
+			margin: 20px;
+			border-radius: 1em;
+			float:left;
+		}
+	</style>
 </head>
 <body>
-	<header>
-		<h1><a href="index.html">Java Coffee <img src="images/logo.png" alt="Java Coffee" width="40px;" height="50px;"></a></h1>
+	<header class="global_header">
+		<a href="index.html"><img src="new_image/logo.png"></a>
+		<nav class="global_header_navigation">
+			<ul>
+				<li><a href="coffee_intro.html">Coffee Introduction</a></li>
+				<li><a href="drink_category.html">Menu</a></li>
+				<li><a href="social_impact.html">Social Impact</a> </li>
+				<li><a href="app.html">APP</a></li>
+			</ul>
+		</nav>
 	</header>
-	<nav >
-		<h2><a href="coffee_intro.html">Coffee Introduction</a> | <a href="drink_category.html">Menu</a> | <a href="social_impact.html">Social Impact</a> | <a href="app.html">APP</a></h2>
-	</nav>
-	<section>
+	<main>
+		<section>
+		<section class="cappuccino">
 		<table>
 			<tr>
 				<td>
-					<img src="images/cappuccino.jpg" width="250px;" height="200px;">
+					<img src="new_image/cappuccino.jpg" width="250px;" height="200px;">
 				</td>
 				<td>
 					<table>
@@ -23,7 +52,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td colspan="2">
+							<td colspan="2" >
 								Cappuccino is a coffee drink that today is typically composed of double espresso and hot milk, with the surface topped with foamed milk.The top third of the drink consists of milk foam; this foam can be decorated with artistic drawings made with the same milk.
 							</td>
 						</tr>
@@ -52,10 +81,11 @@
 			</tr>
 		</table>
 	</section>
-	<footer>
-		<hr>
-		<a href="aboutus.html">About Us</a> |<a href="contact_us.html"> Contact Us</a> <br>
-		&copy;2019 JavaCoffee Corporation. All rights reserved.
+		</section>
+	</main>
+	<footer class="global_footer">
+		<div><a href="aboutus.html">About Us</a> | <a href="contact_us.html">Contact Us</a></div>
+		<div>&copy;2019 JavaCoffee Corporation. All rights reserved.</div>
 	</footer>
 </body>
 </html>
