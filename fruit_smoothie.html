@@ -3,26 +3,7 @@
 <head>
 	<title>Fruit Smoothie in Java Coffee</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<style>
-		.fruit_smoothie {
-			padding: 20px;
-			height:390px;
-			}
-		.fruit_smoothie td{
-			font-style: italic;
-			font-size: 1em;
-			line-height: 2em;
-			margin: 20px;
-		}
-		.fruit_smoothie img{
-			box-shadow: 5px 5px 10px 3px #888888;
-			width:280px;
-			height:300px;
-			margin: 20px;
-			border-radius: 1em;
-			float:left;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/detail.css">
 </head>
 <body>
 	<header class="global_header">
@@ -37,8 +18,7 @@
 		</nav>
 	</header>
 	<main>
-	<section class="fruit_smoothie">
-	<section>
+	<section class="detail_page">
 		<table>
 			<tr>
 				<td>
@@ -57,12 +37,20 @@
 						<form action="cart.html" method="post" name="payForm">
 						<tr>
 							<input type="hidden" name="id" value="6">
-							<td width="10%"><b>Flavor:</b></td>
-							<td><input type="radio" name="flavor" value="1"/>Orange Mango &nbsp; <input type="radio" name="flavor" value="2"/>Strawberry &nbsp; <input type="radio" name="flavor" value="3"/>Chocolate </td>
+							<td width="20%"><b>Flavor:</b></td>
+							<td>
+								<input type="radio" id="flavor_1" name="flavor" value="1"/><label for="flavor_1">Orange Mango</label>&nbsp;&nbsp;
+								<input type="radio" id="flavor_2" name="flavor" value="2"/><label for="flavor_2">Strawberry</label>&nbsp;&nbsp; 
+								<input type="radio" id="flavor_3" name="flavor" value="3"/><label for="flavor_3">Chocolate</label>&nbsp;&nbsp; 
+							</td>
 						</tr>
 						<tr>
 							<td><b>Size:</b></td>
-							<td><input type="radio" name="size" value="large"/>Large &nbsp; <input type="radio" name="size" value="medium"/> Medium &nbsp;<input type="radio" name="size" value="small" checked="true" /> Small</td>
+							<td>
+								<input type="radio" name="size" id="large" value="large"/><label for="large">Large</label>&nbsp;&nbsp; 
+								<input type="radio" name="size" id="medium" value="medium"/><label for="medium">Medium</label>&nbsp;&nbsp; 
+								<input type="radio" name="size" id="small" value="small" checked="true" /><label for="small">Small</label>
+							</td>
 						</tr>
 						<tr>
 							<td><b>Unit price:</b></td>
@@ -70,11 +58,11 @@
 						</tr>
 						<tr>
 							<td><b>Quantity:</b></td>
-							<td><input type="text" name="number" value="1" size="10"/></td>
+							<td><input type="number" name="number" min="1" value="1" size="10"/></td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="submit" value="Buy Now">&nbsp;|&nbsp;<input type="button" value="Add To Cart">
+								<input type="submit" class="button" value="    Buy Now    ">&nbsp;&nbsp;<input type="button" class="button"  value="Add To Cart">
 							</td>
 						</tr>
 						</form>
@@ -82,7 +70,6 @@
 				</td>
 			</tr>
 		</table>
-	</section>
 	</section>
 	</main>
 	<footer class="global_footer">
