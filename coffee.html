@@ -3,26 +3,7 @@
 <head>
 	<title>Coffee in Java Coffee</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<style>
-		.coffee {
-			padding: 20px;
-			height:390px;
-			}
-		.coffee td{
-			font-style: italic;
-			font-size: 1em;
-			line-height: 2em;
-			margin: 20px;
-		}
-		.coffee img{
-			box-shadow: 5px 5px 10px 3px #888888;
-			width:350px;
-			height:300px;
-			margin: 20px;
-			border-radius: 1em;
-			float:left;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/detail.css">
 </head>
 <body>
 	<header class="global_header">
@@ -37,49 +18,51 @@
 		</nav>
 	</header>
 	<main>
-	<section>
-	<section class="coffee">
-		<table>
-			<tr>
-				<td>
-					<img src="new_image/coffee/coffee.jpg" width="250px;" height="200px;">
-				</td>
-				<td>
-					<table>
-						<tr>
-							<td colspan="2"><h3>Coffee</h3></td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species.
-							</td>
-						</tr>
-						<form action="cart.html" method="post" name="payForm">
-						<tr>
-							<input type="hidden" name="id" value="2">
-							<td width="10%"><b>Size:</b></td>
-							<td><input type="radio" name="size" value="large"/>Large &nbsp; <input type="radio" name="size" value="medium"/> Medium &nbsp;<input type="radio" name="size" value="small" checked="true" /> Small</td>
-						</tr>
-						<tr>
-							<td><b>Unit price:</b></td>
-							<td>$5.00</td>
-						</tr>
-						<tr>
-							<td><b>Quantity:</b></td>
-							<td><input type="text" name="number" value="1" size="10"/></td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<input type="submit" value="Buy Now">&nbsp;|&nbsp;<input type="button" value="Add To Cart">
-							</td>
-						</tr>
-						</form>
-					</table>
-				</td>
-			</tr>
-		</table>
-	</section>
-	</section>
+		<section class="detail_page">
+			<table>
+				<tr>
+					<td>
+						<img src="new_image/coffee/coffee.jpg" width="250px;" height="200px;">
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td colspan="2"><h3>Coffee</h3></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species.
+								</td>
+							</tr>
+							<form action="cart.html" method="post" name="payForm">
+							<tr>
+								<input type="hidden" name="id" value="2">
+								<td width="20%"><b>Size:</b></td>
+								<td>
+									<input type="radio" name="size" id="large" value="large"/><label for="large">Large</label>&nbsp;&nbsp; 
+									<input type="radio" name="size" id="medium" value="medium"/><label for="medium">Medium</label>&nbsp;&nbsp; 
+									<input type="radio" name="size" id="small" value="small" checked="true" /><label for="small">Small</label>
+								</td>
+							</tr>
+							<tr>
+								<td><b>Unit price:</b></td>
+								<td>$5.00</td>
+							</tr>
+							<tr>
+								<td><b>Quantity:</b></td>
+								<td><input type="number" name="number" min="1" value="1" size="10"/></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<input type="submit" class="button" value="    Buy Now    ">&nbsp;&nbsp;<input type="button" class="button"  value="Add To Cart">
+								</td>
+							</tr>
+							</form>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</section>
 	</main>
 	<footer class="global_footer">
 		<div><a href="aboutus.html">About Us</a> | <a href="contact_us.html">Contact Us</a></div>

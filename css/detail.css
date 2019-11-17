@@ -1,0 +1,28 @@
+.detail_page {
+	padding: 20px;
+}
+
+.detail_page td{
+	font-style: italic;
+	font-size: 1em;
+	line-height: 2em;
+	margin: 20px;
+}
+
+.detail_page img{
+	box-shadow: 5px 5px 10px 3px #888888;
+	width:250px;
+	height:300px;
+	margin: 20px;
+	border-radius: 1em;
+}
+
+.button {
+	background-color: red;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 1em;
+}
