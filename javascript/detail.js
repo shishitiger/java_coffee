@@ -1,9 +1,8 @@
-var basic_price=3;
 var size_factor=1;
 var flavor_factor=1;
 
 function change_factor(type, factor){
-	if(type = "size"){
+	if(type == "size"){
 		size_factor=factor;
 	} else{
 		flavor_factor=factor;
