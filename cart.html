@@ -132,7 +132,7 @@
 						<td><b>Total:</b></td>
 						<td id="total"></td>
 					</tr>
-					<tr>
+					<tr id="msg_row">
 						<td colspan="6">
 							<span id="error_msg" style="color: red"></span>
 						</td>
@@ -166,11 +166,13 @@
 	}
 
 	function check_form() {
+		document.getElementById("msg_row").style.display="none";
 		document.getElementById("error_msg").innerHTML="";
 		for (var i = 1; i <= 3; i++) {
 			var value = document.getElementById("quantity_" + i).value;
 			if(value == ""){
 				document.getElementById("error_msg").innerHTML="please input the quantity you want";
+				document.getElementById("msg_row").style.display="";
 				return false;
 			}
 		}
