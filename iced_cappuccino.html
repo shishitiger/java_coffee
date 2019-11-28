@@ -33,14 +33,22 @@
 						<tr>
 							<td colspan="2">With less milk than a latte, Iced Cappuccino offers a stronger espresso flavor, a luxurious texture and a velvety, frothy foam with a crisp, cool undercurrent.</td>
 						</tr>
-						<form action="cart.html" method="post" name="payForm">
+						<form action="cart.html" method="post" name="payForm" onsubmit="return check_form();">
 						<tr>
 							<input type="hidden" name="id" value="9">
 							<td width="20%"><b>Size:</b></td>
 							<td>
-								<input type="radio" name="size" onchange="change_factor('size', 1.5);" id="large" value="large"/><label for="large">Large</label>&nbsp;&nbsp; 
-								<input type="radio" name="size" onchange="change_factor('size', 1.3);" id="medium" value="medium"/><label for="medium">Medium</label>&nbsp;&nbsp; 
-								<input type="radio" name="size" onchange="change_factor('size', 1);" id="small" value="small" checked="true" /><label for="small">Small</label>
+								<ul class="detail_specification">
+									<li>
+										<input type="radio" name="size" onchange="change_factor('size', 1.5);" id="large" value="large"/><label for="large">Large</label>
+									</li>
+									<li>
+										<input type="radio" name="size" onchange="change_factor('size', 1.3);" id="medium" value="medium"/><label for="medium">Medium</label>
+									</li>
+									<li>
+										<input type="radio" name="size" onchange="change_factor('size', 1);" id="small" value="small" checked="true" /><label for="small">Small</label>
+									</li>
+								</ul>
 							</td>
 						</tr>
 						<tr>
@@ -50,11 +58,16 @@
 						</tr>
 						<tr>
 							<td><b>Quantity:</b></td>
-							<td><input type="number" name="number" min="1" value="1" size="10"/></td>
+							<td><input type="number" name="quantity" min="1" value="1" size="5" id="quantity"/></td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="submit" class="button" value="    Buy Now    ">&nbsp;&nbsp;<input type="button" class="button"  value="Add To Cart">
+								<span style="color: red" id="error_msg"></span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="submit" class="button" value="    Buy Now    ">&nbsp;&nbsp;<input type="button" class="button"  value="Add To Cart" onclick="check_form();">
 							</td>
 						</tr>
 						</form>

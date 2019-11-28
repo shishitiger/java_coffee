@@ -26,3 +26,22 @@
 	cursor: pointer;
 	border-radius: 1em;
 }
+
+
+.detail_specification {
+	list-style: none;
+	height: 2em;
+	padding: 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.detail_specification li{
+	width:auto;
+	position: relative;
+	display: block;
+	float: left;
+	margin-right: 40px;
+	
+}
+

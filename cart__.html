@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Coffee, The best coffee shop around the world</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style>
+		*{
+			box-sizing: border-box;
+			}
+		.container {
+			background-color: #f2f2f2;
+			padding: 5px 20px 15px 20px;
+			border: 1px solid lightgrey;
+			border-radius: 3px;
+			}
+		 p{
+				font-family: Arial,serif;
+				font-size:17px;
+				float:right;
+			}
+		 img{
+			padding:10px;
+			float: center-left;
+			}
+
+	</style>
+</head>
+<body>
+	<header class="global_header">
+		<a href="index.html"><img src="new_image/logo.png"></a>
+		<nav class="global_header_navigation">
+			<ul>
+				<li><a href="coffee_intro.html">Coffee Introduction</a></li>
+				<li><a href="drink_category.html">Menu</a></li>
+				<li><a href="social_impact.html">Social Impact</a> </li>
+				<li><a href="app.html">APP</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+	<section>
+	<section>
+		<form action="qrcode.html" method="POST" name="payForm">
+		<div class="container">
+			<h2>Cart</h2>
+			<table>
+			<tr>
+				<th><img src="new_image/coffee/coffee.jpg" width="200px" height="150px"></th>
+				<th><p style="float:left;">Small Coffee	</p></th>	
+				<th><p><span style="float:right;">$1</span></p></th>
+			</tr>
+			<tr>
+				<th><img src="new_image/coffee/hotchocolate.jpg" width="200px" height="150px"></th>
+				<th><p style="float:left;">Medium Hot Chocolate</p></th>
+				<th><p><span style="float:right;">$2</span></p></th>
+			</tr>
+			<tr>
+				<th><img src="new_image/coffee/latte.jpg" width="200px" height="150px"></th>
+				<th><p style="float:left;">Large Latte </p></th>
+				<th><p><span style="float:right;">$3</span></p></th>	
+			</tr>
+			<tr>
+				<th><p>Subtotal:</p></th>
+				<th><p><span style="float:right;">$6.00</span></p></th>
+			</tr>
+			<tr>
+				<th><p>Tax:</p></th>
+				<th><p><span style="float:right;">$0.78</span></p></th>
+			</tr>
+			<tr>
+				<th><p>Total:</p></th>
+				<th><p><span style="float:right;">$6.80</span></p></th>
+			</tr>
+		</table>
+		<div style="clear: both;"></div>
+		<button type="submit"><a href="qrcode.html">Pay now</a></button>
+		</form>
+	</section>
+	</section>
+	</main>
+	<footer class="global_footer">
+		<div><a href="aboutus.html">About Us</a> | <a href="contact_us.html">Contact Us</a></div>
+		<div>&copy;2019 JavaCoffee Corporation. All rights reserved.</div>
+	</footer>
+</body>
+</html>

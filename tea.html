@@ -35,23 +35,41 @@
 								Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves. There are many different types of tea, such as peppermint, apple cinnamon, honey lemon, and green tea.
 							</td>
 						</tr>
-						<form action="cart.html" method="post" name="payForm">
+						<form action="cart.html" method="post" name="payForm" onsubmit="return check_form();">
 						<tr>
 							<input type="hidden" name="id" value="13">
 							<td width="20%"><b>Flavor:</b></td>
 							<td>
-								<input type="radio" id="flavor_1" onchange="change_factor('flavor', 1.1);" name="flavor" value="1"/><label for="flavor_1">Green Tea</label>&nbsp;&nbsp;
-								<input type="radio" id="flavor_2" onchange="change_factor('flavor', 1.09);" name="flavor" value="2"/><label for="flavor_2">Apple Cinnamon</label>&nbsp;&nbsp; 
-								<input type="radio" id="flavor_3" onchange="change_factor('flavor', 1.06);" name="flavor" value="3"/><label for="flavor_3">Peppermint Tea</label>&nbsp;&nbsp; 
-								<input type="radio" id="flavor_4" onchange="change_factor('flavor', 1);" name="flavor" value="2" checked="true" /><label for="flavor_4">Honey Lemon</label>&nbsp;&nbsp; 
+								<ul class="detail_specification">
+									<li>
+										<input type="radio" id="flavor_1" onchange="change_factor('flavor', 1.1);" name="flavor" value="1"/><label for="flavor_1">Green Tea</label>
+									</li>
+									<li>
+										<input type="radio" id="flavor_2" onchange="change_factor('flavor', 1.09);" name="flavor" value="2"/><label for="flavor_2">Apple Cinnamon</label>
+									</li>
+									<li>
+										<input type="radio" id="flavor_3" onchange="change_factor('flavor', 1.06);" name="flavor" value="3"/><label for="flavor_3">Peppermint Tea</label>
+									</li>
+									<li>
+										<input type="radio" id="flavor_4" onchange="change_factor('flavor', 1);" name="flavor" value="2" checked="true" /><label for="flavor_4">Honey Lemon</label>
+									</li>
+								</ul>
 							</td>
 						</tr>
 						<tr>
 							<td><b>Size:</b></td>
 							<td>
-								<input type="radio" name="size" onchange="change_factor('size', 1.5);" id="large" value="large"/><label for="large">Large</label>&nbsp;&nbsp; 
-								<input type="radio" name="size" onchange="change_factor('size', 1.3);" id="medium" value="medium"/><label for="medium">Medium</label>&nbsp;&nbsp; 
-								<input type="radio" name="size" onchange="change_factor('size', 1);" id="small" value="small" checked="true" /><label for="small">Small</label>
+								<ul class="detail_specification">
+									<li>
+										<input type="radio" name="size" onchange="change_factor('size', 1.5);" id="large" value="large"/><label for="large">Large</label>
+									</li>
+									<li>
+										<input type="radio" name="size" onchange="change_factor('size', 1.3);" id="medium" value="medium"/><label for="medium">Medium</label>
+									</li>
+									<li>
+										<input type="radio" name="size" onchange="change_factor('size', 1);" id="small" value="small" checked="true" /><label for="small">Small</label>
+									</li>
+								</ul>
 							</td>
 						</tr>
 						<tr>
@@ -61,11 +79,16 @@
 						</tr>
 						<tr>
 							<td><b>Quantity:</b></td>
-							<td><input type="number" name="number" min="1" value="1" size="5"/></td>
+							<td><input type="number" name="quantity" min="1" value="1" size="5" id="quantity"/></td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="submit" class="button" value="    Buy Now    ">&nbsp;&nbsp;<input type="button" class="button"  value="Add To Cart">
+								<span style="color: red" id="error_msg"></span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="submit" class="button" value="    Buy Now    ">&nbsp;&nbsp;<input type="button" class="button"  value="Add To Cart" onclick="check_form();">
 							</td>
 						</tr>
 						</form>

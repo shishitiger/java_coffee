@@ -4,25 +4,42 @@
 	<title>Java Coffee, The best coffee shop around the world</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<style>
-		*{
-			box-sizing: border-box;
-			}
-		.container {
-			background-color: #f2f2f2;
-			padding: 5px 20px 15px 20px;
-			border: 1px solid lightgrey;
-			border-radius: 3px;
-			}
-		 p{
-				font-family: Arial,serif;
-				font-size:17px;
-				float:right;
-			}
-		 img{
-			padding:10px;
-			float: center-left;
-			}
-
+		.cart {
+			padding: 20px;
+		}
+		.cart header{
+			text-align: center;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border-bottom: 1px dotted black;
+		}
+		.cart img{
+			box-shadow: 5px 5px 10px 3px #888888;
+			width:50px;
+			height:50px;
+			margin: 10px;
+			border-radius: 1em;
+		}
+		table,table tr th, table tr td {
+			border:1px solid #bfc5c457; 
+			margin: 20px;
+		}
+        table {
+        	border-collapse: collapse;
+        	width:900px;
+        	border-radius: 1em;
+        	text-align: center;
+        }
+        .button {
+			background-color: red;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			font-size: 15px;
+			cursor: pointer;
+			border-radius: 1em;
+			margin:5px;
+		}
 	</style>
 </head>
 <body>
@@ -38,44 +55,96 @@
 		</nav>
 	</header>
 	<main>
-	<section>
-	<section>
-		<form action="qrcode.html" method="POST" name="payForm">
-		<div class="container">
-			<h2>Cart</h2>
+	<section class="cart">
+		<header><h3>Shopping Cart</h3></header>
+		<form action="qrcode.html" method="POST" name="payForm" onsubmit="return check_form();">
 			<table>
-			<tr>
-				<th><img src="new_image/coffee/coffee.jpg" width="200px" height="150px"></th>
-				<th><p style="float:left;">Small Coffee	</p></th>	
-				<th><p><span style="float:right;">$1</span></p></th>
-			</tr>
-			<tr>
-				<th><img src="new_image/coffee/hotchocolate.jpg" width="200px" height="150px"></th>
-				<th><p style="float:left;">Medium Hot Chocolate</p></th>
-				<th><p><span style="float:right;">$2</span></p></th>
-			</tr>
-			<tr>
-				<th><img src="new_image/coffee/latte.jpg" width="200px" height="150px"></th>
-				<th><p style="float:left;">Large Latte </p></th>
-				<th><p><span style="float:right;">$3</span></p></th>	
-			</tr>
-			<tr>
-				<th><p>Subtotal:</p></th>
-				<th><p><span style="float:right;">$6.00</span></p></th>
-			</tr>
-			<tr>
-				<th><p>Tax:</p></th>
-				<th><p><span style="float:right;">$0.78</span></p></th>
-			</tr>
-			<tr>
-				<th><p>Total:</p></th>
-				<th><p><span style="float:right;">$6.80</span></p></th>
-			</tr>
-		</table>
-		<div style="clear: both;"></div>
-		<button type="submit"><a href="qrcode.html">Pay now</a></button>
+				<thead>
+					<tr style="text-align: center; background-color: #dca763;">
+						<th width="10%"></th>
+						<th width="10%">Name</th>
+						<th width="10%">Size</th>
+						<th width="10%">Flavor</th>
+						<th width="10%">Quantity</th>
+						<th width="10%">Unit Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="ice_coffee.html"><img src="new_image/coffee/iced_coffee.jpeg"></a></td>
+						<td><b><a href="ice_coffee.html">Iced Coffee</a></b></td>
+						<td>
+							<input type="hidden" value="2.9" id="basic_price_1"> 
+							<select id="size_1" onchange="calculate();">
+								<option value="1.5">Large</option>
+								<option value="1.3">Medium</option>
+								<option value="1">Small</option>
+							</select>
+						</td>
+						<td></td>	
+						<td><input type="number" size="2" value="1" min="1" id="quantity_1" onchange="calculate();"></td>
+						<td id="unit_price_1">$4.5</td>
+					</tr>
+					<tr>
+						<td><a href="milkshakes.html"><img src="new_image/coffee/milkshakes.jpeg"></a></td>
+						<td><b><a href="milkshakes.html">Milkshakes</a></b></td>
+						<td>
+							<input type="hidden" value="2.9" id="basic_price_2"> 
+							<select id="size_2" onchange="calculate();">
+								<option value="1.5">Large</option>
+								<option value="1.3">Medium</option>
+								<option value="1" selected>Small</option>
+							</select>
+						</td>
+						<td>
+							<select id="flavor_2" onchange="calculate();">
+								<option value="1.1">Chocolate</option>
+								<option value="1.07">Vanilla</option>
+								<option value="1.02">Strawberry</option>
+								<option value="1" selected>Caramel</option>
+							</select>
+						</td>	
+						<td><input type="number" size="2" value="2" min="1" id="quantity_2" onchange="calculate();"></td>
+						<td id="unit_price_2">$3.1</td>
+					</tr>
+					<tr>
+						<td><a href="latte.html"><img src="new_image/coffee/latte.jpg"></a></td>
+						<td><b><a href="latte.html">Latte</a></b></td>
+						<td>
+							<input type="hidden" value="2.9" id="basic_price_3"> 
+							<select id="size_3" onchange="calculate();">
+								<option value="1.5">Large</option>
+								<option value="1.3" selected>Medium</option>
+								<option value="1">Small</option>
+							</select>
+						</td>
+						<td></td>	
+						<td><input type="number" size="2" value="3" min="1" id="quantity_3" onchange="calculate();"></td>
+						<td id="unit_price_3">$2.9</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td><b>Subtotal:</b></td>
+						<td id="sub_total"></td>
+						<td><b>Tax:</b></td>
+						<td id="tax"></td>
+						<td><b>Total:</b></td>
+						<td id="total"></td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<span id="error_msg" style="color: red"></span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<input type="submit" value="    Pay Now    " class="button">
+						</td>
+					</tr>
+				</tfoot>
+			</table>
 		</form>
-	</section>
 	</section>
 	</main>
 	<footer class="global_footer">
@@ -84,3 +153,56 @@
 	</footer>
 </body>
 </html>
+
+<script type="text/javascript">
+	
+	function getValueFromSelect(id){
+		var select=document.getElementById(id);
+		if (select){
+			var index = select.selectedIndex;
+			return parseFloat(select.options[index].value);
+		}
+		return 1;
+	}
+
+	function check_form() {
+		document.getElementById("error_msg").innerHTML="";
+		for (var i = 1; i <= 3; i++) {
+			var value = document.getElementById("quantity_" + i).value;
+			if(value == ""){
+				document.getElementById("error_msg").innerHTML="please input the quantity you want";
+				return false;
+			}
+		}
+		return true;
+	}
+
+	function calculate(){
+		var result = check_form();
+		if(!result){
+			return false;
+		}
+		var sub_total=0;
+		for(var i = 1; i <= 3; i++){
+			var basic_price = parseFloat(document.getElementById("basic_price_" +i).value);
+			var flavor_factor = getValueFromSelect("flavor_"+i);
+			var size_factor = getValueFromSelect("size_"+i);
+			var quantity = parseInt(document.getElementById("quantity_" + i).value);
+			var unit_price = basic_price * flavor_factor * size_factor;
+
+			unit_price = Math.round(unit_price * 100) / 100;
+			document.getElementById("unit_price_"+i).innerHTML = "$"+unit_price;
+
+			sub_total = sub_total + unit_price * quantity;
+		}
+
+		sub_total = Math.round(sub_total * 100) / 100;
+		document.getElementById("sub_total").innerHTML=sub_total;
+
+		var tax = Math.round(sub_total * 0.13 * 100) / 100;
+		document.getElementById("tax").innerHTML = tax;
+		
+		document.getElementById("total").innerHTML = Math.round((tax+ sub_total) * 100) / 100;
+	}
+	calculate();
+</script>
